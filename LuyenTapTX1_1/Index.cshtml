@@ -1,0 +1,67 @@
+﻿@model LuyenTapTX1_p1.Models.Sanpham
+@{
+    ViewBag.Title = "Index";
+    var ds1 = ViewBag.ds1 as List<LuyenTapTX1_p1.Models.Sanpham>;
+    var ds2 = ViewBag.ds2 as List<LuyenTapTX1_p1.Models.Sanpham>;
+}
+
+@section styles{
+    <style>
+        table{
+            border-collapse: collapse
+        }
+        th,
+        td { 
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>    
+}
+
+<h1>Danh sach san pham co gia tien lon hon hoac bang 250</h1>
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Hãng sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Tổng tiền</th>
+    </tr>
+    @foreach (var sp in ds1)
+    {
+        <tr>
+            <td>@sp.masp</td>
+            <td>@sp.hangsx</td>
+            <td>@sp.tensp</td>
+            <td>@sp.soluong</td>
+            <td>@sp.giatien</td>
+            <td>@sp.tongtien</td>
+        </tr>
+    }
+</table>
+
+
+<h1>Danh sach san pham cua hang Xiaomi</h1>
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Hãng sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Tổng tiền</th>
+    </tr>
+    @foreach (var sp in ds2)
+    {
+        <tr>
+            <td>@sp.masp</td>
+            <td>@sp.hangsx</td>
+            <td>@sp.tensp</td>
+            <td>@sp.soluong</td>
+            <td>@sp.giatien</td>
+            <td>@sp.tongtien</td>
+        </tr>
+    }
+</table>
+

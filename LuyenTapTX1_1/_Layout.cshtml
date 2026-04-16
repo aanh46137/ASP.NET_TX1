@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", required: false)
+    <style>
+        #top{
+            background-color: #0099CC;
+            color: white;
+        }
+        nav{
+            background-color: #05F1FF;
+        }
+        a{
+            color: black !important;
+        }
+        body{
+            font-family: Tahoma;
+        }
+    </style>
+</head>
+<body>
+    <div id="top" class="container p-3 ps-1 fs-3">
+        Kiểm tra 1 - DDA
+    </div>
+    <nav class="container navbar navbar-expand-sm navbar-toggleable-sm">
+        <div class="container">
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 justify-content-end">
+                    <li>@Html.ActionLink("Hiển thị danh sách | ", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Nhập dữ liệu", "Input", "Sanphams", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

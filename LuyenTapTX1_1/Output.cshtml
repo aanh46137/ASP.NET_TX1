@@ -1,0 +1,40 @@
+﻿@model LuyenTapTX1_p1.Models.Sanpham
+@{
+    ViewBag.Title = "Output";
+}
+
+@section styles{
+    <style>
+        table {
+            border-collapse: collapse
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+}
+
+<h1>Danh sach san pham vua nhap</h1>
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Hãng sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Giá tiền</th>
+        <th>Tổng tiền</th>
+    </tr>
+    <tr>
+        <td>@Model.masp</td>
+        <td>@Model.hangsx</td>
+        <td>@Model.tensp</td>
+        <td>@Model.soluong</td>
+        <td>@Model.giatien</td>
+        <td>@Model.tongtien</td>
+    </tr>
+</table>
+
+

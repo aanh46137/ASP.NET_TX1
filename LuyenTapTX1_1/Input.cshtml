@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Input";
+}
+
+<h1>Nhập thông tin sản phẩm</h1>
+<form action="/Sanphams/Output" method="post">
+    <table>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <td><input type="text" name="masp" /></td>
+        </tr>
+        <tr>
+            <th>Hãng sản xuất</th>
+            <td>
+                <input type="radio" name="hangsx" value="Apple" /> Apple
+                <input type="radio" name="hangsx" value="Xiaomi" /> Xiaomi
+            </td>
+        </tr>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <td><input type="text" name="tensp" /></td>
+        </tr>
+        <tr>
+            <th>Số lượng</th>
+            <td><input type="number" name="soluong" /></td>
+        </tr>
+        <tr>
+            <th>Giá tiền</th>
+            <td><input type="number" name="giatien" /></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Gửi</button></td>
+        </tr>
+    </table>
+</form>
+
