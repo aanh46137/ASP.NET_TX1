@@ -1,0 +1,67 @@
+﻿@model LuyenTapTX1_p4.Models.Sanpham
+@{
+    ViewBag.Title = "Index";
+    var ds1 = ViewBag.ds1 as List<LuyenTapTX1_p4.Models.Sanpham>;
+    var ds2 = ViewBag.ds2 as List<LuyenTapTX1_p4.Models.Sanpham>;
+}
+
+@section styles{
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    th,
+    td{
+        border: 1px solid black;
+        padding: 8px;
+    }
+</style>    
+}
+
+<h2>Danh sách sản phẩm có giá tiền > 100</h2>
+<table>
+    <tr>
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Số lượng</td>
+        <td>Giá tiền</td>
+        <td>Giảm giá</td>
+        <td>Thành tiền</td>
+    </tr>
+    @foreach (var sp in ds1)
+    {
+        <tr>
+            <td>@sp.masp </td>
+            <td>@sp.tensanpham </td>
+            <td>@sp.soluong </td>
+            <td>@sp.giatien</td>
+            <td>@sp.giamgia</td>
+            <td>@sp.thanhtien</td>
+        </tr>
+    }
+</table>
+
+
+<h2>Danh sách sản phẩm có giảm giá</h2>
+<table>
+    <tr>
+        <td>Mã sản phẩm</td>
+        <td>Tên sản phẩm</td>
+        <td>Số lượng</td>
+        <td>Giá tiền</td>
+        <td>Giảm giá</td>
+        <td>Thành tiền</td>
+    </tr>
+    @foreach (var sp in ds2)
+    {
+        <tr>
+            <td>@sp.masp </td>
+            <td>@sp.tensanpham </td>
+            <td>@sp.soluong </td>
+            <td>@sp.giatien</td>
+            <td>@sp.giamgia</td>
+            <td>@sp.thanhtien</td>
+        </tr>
+    }
+</table>
+

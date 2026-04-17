@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Input";
+}
+
+<h2>Nhập thông tin sản phẩm</h2>
+<form action="/QuanlySanpham/Output" method="post">
+    <table>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <td><input type="text" name="masp" /></td>
+        </tr>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <td><input type="text" name="tensanpham" /></td>
+        </tr>
+        <tr>
+            <th>Số lượng</th>
+            <td><input type="number" name="soluong" /></td>
+        </tr>
+        <tr>
+            <th>Giá tiền</th>
+            <td><input type="number" name="giatien" /></td>
+        </tr>
+        <tr>
+            <th>Giảm giá</th>
+            <td>
+                <input type="radio" name="giamgia" value=1 /> Có
+                <input type="radio" name="giamgia" value=0 /> Không
+            </td>
+        </tr>
+
+        @*<tr>
+            <th>Địa chỉ</th>
+            <td>
+                <select name="diachi">
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hà Nam">Hà Nam</option>
+                </select>
+            </td>
+        </tr>*@
+
+        <tr>
+            <td><button type="submit">Gửi</button></td>
+        </tr>
+    </table>
+</form>
+
