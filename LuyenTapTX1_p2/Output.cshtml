@@ -1,0 +1,40 @@
+﻿@model LuyenTapTX1_p3.Models.Nhanvien
+@{
+    ViewBag.Title = "Output";
+}
+
+@section styles{
+    <style>
+        table {
+            border-collapse: collapse
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+}
+
+<h1>Thông tin nhân viên vừa nhập </h1>
+<table>
+    <tr>
+        <td>Mã nhân viên</td>
+        <td>Họ tên</td>
+        <td>Địa chỉ</td>
+        <td>Số ngày làm</td>
+        <td>Lương ngày</td>
+        <td>Tiền lương</td>
+    </tr>
+    <tr>
+        <td>@Model.manv</td>
+        <td>@Model.hoten</td>
+        <td>@Model.diachi</td>
+        <td>@Model.songaylam </td>
+        <td>@Model.luongngay</td>
+        <td>@Model.tienluong</td>
+    </tr>
+</table>
+
+

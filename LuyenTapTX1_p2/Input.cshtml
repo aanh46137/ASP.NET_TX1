@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Input";
+}
+
+<h2>Nhập thông tin nhân viên</h2>
+<form action="/QunalyNhanvien/Output" method="post">
+    <table>
+        <tr>
+            <th>Mã nhân viên</th>
+            <td><input type="text" name="manv" /></td>
+        </tr>
+        
+        <tr>
+            <th>Họ tên</th>
+            <td><input type="text" name="hoten" /></td>
+        </tr>
+        
+        <tr>
+            <th>Địa chỉ</th>
+            <td>
+                <select name="diachi">
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hải Phòng">Hải Phòng</option>
+                    <option value="Quảng Ninh">Quảng Ninh</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <th>Số ngày làm</th>
+            <td><input type="number" name="songaylam" /></td>
+        </tr>
+        
+        <tr>
+            <th>luongngay</th>
+            <td><input type="number" name="luongngay" /></td>
+        </tr>
+
+        <tr>
+            <td><button type="submit">Gửi</button></td>
+        </tr>
+    </table>
+</form>
+

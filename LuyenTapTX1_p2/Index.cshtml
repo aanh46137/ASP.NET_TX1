@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    var ds1 = ViewBag.ds1 as List<LuyenTapTX1_p3.Models.Nhanvien>;
+    var ds2 = ViewBag.ds2 as List<LuyenTapTX1_p3.Models.Nhanvien>;
+}
+
+@section styles{
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th,
+        td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+}
+
+<h1>Danh sách nhân viên có số ngày làm < 20 </h1>
+<table>
+    <tr>
+        <td>Mã nhân viên</td>
+        <td>Họ tên</td>
+        <td>Địa chỉ</td>
+        <td>Số ngày làm</td>
+        <td>Lương ngày</td>
+        <td>Tiền lương</td>
+    </tr>
+    @foreach (var nv in ds1)
+    {
+        <tr>
+            <td>@nv.manv</td>
+            <td>@nv.hoten</td>
+            <td>@nv.diachi</td>
+            <td>@nv.songaylam </td>
+            <td>@nv.luongngay</td>
+            <td>@nv.tienluong</td>
+        </tr>
+    }
+</table>
+
+<h1>Danh sách nhân viên có lương ngày > 190000 </h1>
+<table>
+    <tr>
+        <td>Mã nhân viên</td>
+        <td>Họ tên</td>
+        <td>Địa chỉ</td>
+        <td>Số ngày làm</td>
+        <td>Lương ngày</td>
+        <td>Tiền lương</td>
+    </tr>
+    @foreach (var nv in ds2)
+    {
+        <tr>
+            <td>@nv.manv</td>
+            <td>@nv.hoten</td>
+            <td>@nv.diachi</td>
+            <td>@nv.songaylam </td>
+            <td>@nv.luongngay</td>
+            <td>@nv.tienluong</td>
+        </tr>
+    }
+</table>
+
